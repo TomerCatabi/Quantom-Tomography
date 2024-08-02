@@ -1,6 +1,8 @@
 clear all
 %cd C:\Users\User\PycharmProjects\lab_c\quantum_cryptography\simulations\tomography\HVVH
+%filename should be eddited according to the matrices names that were saved on your local computer
 filename='50bit_num_simulation_HVVH_rho_matrix';
+%bothe base and bit num are extructing the base and bit number from filename and should be change according to your saved file
 base=filename(22:25);
 bit_num=filename(1:2);
 title_figure=strcat('measurement base',{' '},base,{' '},bit_num,' bits simulation');
