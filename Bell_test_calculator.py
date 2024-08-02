@@ -3,9 +3,10 @@ import numpy as np
 import pandas as pd
 
 
-#
-#
-#
+######################################################################
+# The following functions are used in the loop for reading file data #
+# and extructing the relvant information                             #
+######################################################################
 
 def file_name(a,b):
     
@@ -47,7 +48,7 @@ def read_counts(data):
         if j == 0:
             treshold = 100000
         elif j == 1:
-            treshold = 67400
+            treshold = 69000
 
 
         trushold_data.append([treshold, 0, num_of_col])
@@ -79,6 +80,7 @@ def calculate_N_ab(a, b):
     N_ab = read_counts(a_b_data)
     return(N_ab)
 
+# most varibles are self explaintory while sigma would eventually hold our uncertinty of S
 
 E_array = []
 
@@ -88,6 +90,12 @@ angles_b = [-22.5, 22.5]
 tot_plot_array = []
 titles = []
 
+sigma = 0
+
+
+#############
+# Main loop #
+#############
 for a in (angles_a):
     a_vertical = a + 90
 
@@ -115,12 +123,37 @@ for a in (angles_a):
         ########################
         # End of plotting data #
         ########################
+        
+        #################
+        # Calculating S #
+        #################
 
         N_tot = N_ab + N_aV_bV + N_a_bV + N_aV_b
 
         E = (N_ab + N_aV_bV - N_a_bV - N_aV_b)/N_tot
 
         E_array.append(E)
+
+        print('alpha = ' + str(a))
+        print('beta = ' + str(b))
+        print('N_a_b = ' + str(N_ab))
+        print('N_aV_bV = ' + str(N_aV_bV))
+        print('N_a_bV = ' + str(N_a_bV))
+        print('N_aV_b = ' + str(N_aV_b))
+
+
+        # The following varibles will help us find the uncertinty of S
+
+        dSdN_ab = (2*(N_aV_b + N_a_bV)/(N_tot**2))*(np.sqrt(N_ab))
+        dSdN_aV_bV = (2*(N_aV_b + N_a_bV)/(N_tot**2))*(np.sqrt(N_aV_bV))
+        dSdN_a_bV = (-2*(N_ab + N_aV_bV)/(N_tot**2))*(np.sqrt(N_a_bV))
+        dSdN_aV_b = (-2*(N_ab + N_aV_bV)/(N_tot**2))*(np.sqrt(N_aV_b))
+
+        sigma += dSdN_ab**2 + dSdN_aV_bV**2 + dSdN_a_bV**2 + dSdN_aV_b**2
+
+sigma = np.sqrt(sigma)
+
+print('sigma = ' + str(sigma))
 
 line_num = len(tot_plot_array[0])
 colmn_num = len(tot_plot_array)
@@ -158,6 +191,7 @@ for i in range(line_num):
     
     
     k += colmn_num
+
 
 fig.supylabel('Intensity [unitless]')
 
