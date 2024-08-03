@@ -18,7 +18,7 @@ Usage -
   2. Run script to generate CSV file with the data extructed
 
 *Note -
-It is assumed that each one of the videos files is named Angle1Angle2.mp4 with the sighn of the angle (i.e. + or - while zero gets no sighn). This is important as the python script assums the same format for the CVS files.
+It is assumed that each one of the videos files is named Angle1Angle2.mp4 with the sign of the angle (i.e. + or - while zero gets no sign). This is important as the python script assums the same format for the CVS files.
 -----
 Bell_test_calculator.py
 
