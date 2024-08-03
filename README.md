@@ -3,6 +3,7 @@
 
 This repository consists of a TAU lab C expiriment code created by students in order to process the data that was collected in the lab.
 In this particalular brunch you can find the codes relvant for the part 3 i.e. bells inequality calculations. 
+
 -----
 ## Plotter_Garry_for_part_c.m
 
@@ -19,6 +20,7 @@ Usage -
 
 *Note -
 It is assumed that each one of the videos files is named Angle1Angle2.mp4 with the sign of the angle (i.e. + or - while zero gets no sign). This is important as the python script assums the same format for the CVS files.
+
 -----
 ## Bell_test_calculator.py
 
