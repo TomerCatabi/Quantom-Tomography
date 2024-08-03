@@ -5,3 +5,6 @@ This repository contains code for a TAU lab C experiment designed by students to
 - **Part 1**: Data extraction and preprocessing.
 - **Part 2**: Analysis and initial processing.
 - **Part 3**: Final data processing and visualization.
+-----
+Acknowledgements
+  * TAU Lab C
