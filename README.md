@@ -4,7 +4,7 @@
 This repository consists of a TAU lab C expiriment code created by students in order to process the data that was collected in the lab
 In this particalular brunch you can find the codes relvant for the part 1 i.e. density matrix calculations.
 -----
-## plotter_gart.m
+## plotter_gary.m
 This matlab script reads video file of the expiriment and extruct the the intensities read by the camera choosen so that the user can extruct it to a csv file.
 
 Description - The scripts performs the following steps
