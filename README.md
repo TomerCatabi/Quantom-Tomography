@@ -14,7 +14,7 @@ Description - The scripts performs the following steps
   3. Saves the data for each camera in csv file with name extructed from the video's name
 
 Usage -
-  1. Ensure file (e.g. +90+112.5.mp4) is in the same directory as the script.
+  1. Ensure file (e.g. +90+112.5.mp4) is in the same directory as the script
   2. Run script to generate CSV file with the data extructed
 
 *Note -
@@ -30,6 +30,10 @@ Description - The scripts performs the following steps
   3. Calculate (all) N and E parameters
   4. Use E and N parameters to calculate S and it's uncertainty
   5. Plots the read data (plot needs to be saved manually)
+
+Usage -
+  1. Ensure all files (e.g. +90+112.5.csv etc...) are in the same directory as the script
+  2. Run script to calculate S, it's uncertainty and generate plotted data
 
 Dependencies - 
   * numpy
