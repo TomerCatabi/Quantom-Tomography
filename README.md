@@ -35,7 +35,3 @@ Dependencies -
   * numpy
   * pandas
   * matplotlib
------
-Acknowledgements
-
-  * TAU Lab C
