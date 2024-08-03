@@ -3,6 +3,7 @@
 ## General
 This repository consists of a TAU lab C expiriment code created by students in order to process the data that was collected in the lab
 In this particalular brunch you can find the codes relvant for the part 1 i.e. density matrix calculations.
+
 -----
 ## plotter_gary.m
 This matlab script reads video file of the expiriment and extruct the the intensities read by the camera choosen so that the user can extruct it to a csv file.
@@ -18,6 +19,7 @@ Usage -
   3. Exturct data from matlab interface into a CSV file manually
 
 ** Please note that the python file reads data from a CVS file for wich each line corrsipnds to data from a different camera and each coulmn corisponds to a different frame. All toghter each CVS file should have 4 lines, and number of doulmns equal to the number of frames for the video you are currently analyzing. Therefore in order to use the rest of the code provided one should extruct the data with the relvant format in mind.
+
 -----
 ## density_matrix_part_1.py
 
